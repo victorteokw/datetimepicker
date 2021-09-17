@@ -38,7 +38,7 @@ RCT_ENUM_CONVERTER(UIUserInterfaceStyle, (@{
 
 @implementation RBDateTimePickerManager
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE(RBDateTimePicker)
 
 - (UIView *)view
 {
@@ -66,12 +66,12 @@ RCT_EXPORT_METHOD(getDefaultDisplayValue:(NSDictionary *)options resolver:(RCTPr
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIDatePicker* view = [RBDateTimePicker new];
-        
+
         view.preferredDatePickerStyle = UIDatePickerStyleAutomatic;
         UIDatePickerMode renderedMode = [RCTConvert UIDatePickerMode:options[@"mode"]];
         view.datePickerMode = renderedMode;
         // NOTE afaict we do not need to measure the actual dimensions here, but if we do, just look at the original PR
-        
+
         UIDatePickerStyle determinedDisplayValue = view.datePickerStyle;
 
         resolve(@{
