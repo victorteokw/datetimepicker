@@ -13,7 +13,7 @@ public class RBDatetimePickerPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
       return Arrays.<NativeModule>asList(
-        new RNDatePickerDialogModule(reactContext),
+        new RBDatePickerDialogModule(reactContext),
         new RNTimePickerDialogModule(reactContext)
       );
     }

@@ -11,7 +11,7 @@ import type {WindowsNativeProps, WindowsDatePickerChangeEvent} from './types';
 import * as React from 'react';
 
 const styles = StyleSheet.create({
-  rnDatePicker: {
+  rbDatePicker: {
     height: 32,
     width: 150,
   },
@@ -32,7 +32,7 @@ export default function RBDatetimePickerQWE(props: WindowsNativeProps) {
     onChange: props.onChange,
     placeholderText: props.placeholderText,
     selectedDate: props.value ? props.value.getTime() : undefined, // time in milliseconds
-    style: [styles.rnDatePicker, props.style],
+    style: [styles.rbDatePicker, props.style],
   };
 
   const _onChange = (event: WindowsDatePickerChangeEvent) => {

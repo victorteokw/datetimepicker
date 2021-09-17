@@ -38,7 +38,7 @@ public class RNDismissableDatePickerDialog extends DatePickerDialog {
       int year,
       int monthOfYear,
       int dayOfMonth,
-      RNDatePickerDisplay display) {
+      RBDatePickerDisplay display) {
     super(context, callback, year, monthOfYear, dayOfMonth);
     fixSpinner(context, year, monthOfYear, dayOfMonth, display);
   }
@@ -50,7 +50,7 @@ public class RNDismissableDatePickerDialog extends DatePickerDialog {
       int year,
       int monthOfYear,
       int dayOfMonth,
-      RNDatePickerDisplay display) {
+      RBDatePickerDisplay display) {
     super(context, theme, callback, year, monthOfYear, dayOfMonth);
     fixSpinner(context, year, monthOfYear, dayOfMonth, display);
   }
@@ -64,8 +64,8 @@ public class RNDismissableDatePickerDialog extends DatePickerDialog {
     }
   }
 
-  private void fixSpinner(Context context, int year, int month, int dayOfMonth, RNDatePickerDisplay display) {
-    if (Build.VERSION.SDK_INT == Build.VERSION_CODES.N && display == RNDatePickerDisplay.SPINNER) {
+  private void fixSpinner(Context context, int year, int month, int dayOfMonth, RBDatePickerDisplay display) {
+    if (Build.VERSION.SDK_INT == Build.VERSION_CODES.N && display == RBDatePickerDisplay.SPINNER) {
       try {
         // Get the theme's android:datePickerMode
         Class<?> styleableClass = Class.forName("com.android.internal.R$styleable");

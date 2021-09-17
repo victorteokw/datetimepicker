@@ -10,7 +10,7 @@ package com.reactcommunity.RBDatetimePicker;
 /**
  * Date picker display options.
  */
-public enum RNDatePickerDisplay {
+public enum RBDatePickerDisplay {
   CALENDAR,
   SPINNER,
   DEFAULT

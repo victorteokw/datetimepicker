@@ -28,19 +28,19 @@ import static com.reactcommunity.RBDatetimePicker.Common.dismissDialog;
  * {@link NativeModule} that allows JS to show a native date picker dialog and get called back when
  * the user selects a date.
  */
-@ReactModule(name = RNDatePickerDialogModule.FRAGMENT_TAG)
-public class RNDatePickerDialogModule extends ReactContextBaseJavaModule {
+@ReactModule(name = RBDatePickerDialogModule.FRAGMENT_TAG)
+public class RBDatePickerDialogModule extends ReactContextBaseJavaModule {
 
   @VisibleForTesting
-  public static final String FRAGMENT_TAG = "RNDatePickerAndroid";
+  public static final String FRAGMENT_TAG = "RBDatePickerAndroid";
 
-  public RNDatePickerDialogModule(ReactApplicationContext reactContext) {
+  public RBDatePickerDialogModule(ReactApplicationContext reactContext) {
     super(reactContext);
   }
 
   @Override
   public @NonNull String getName() {
-    return RNDatePickerDialogModule.FRAGMENT_TAG;
+    return RBDatePickerDialogModule.FRAGMENT_TAG;
   }
 
   private class DatePickerDialogListener implements OnDateSetListener, OnDismissListener, OnClickListener {
@@ -131,15 +131,15 @@ public class RNDatePickerDialogModule extends ReactContextBaseJavaModule {
     UiThreadUtil.runOnUiThread(new Runnable() {
       @Override
       public void run() {
-        RNDatePickerDialogFragment oldFragment =
-                (RNDatePickerDialogFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
+        RBDatePickerDialogFragment oldFragment =
+                (RBDatePickerDialogFragment) fragmentManager.findFragmentByTag(FRAGMENT_TAG);
 
         if (oldFragment != null && options != null) {
           oldFragment.update(createFragmentArguments(options));
           return;
         }
 
-        RNDatePickerDialogFragment fragment = new RNDatePickerDialogFragment();
+        RBDatePickerDialogFragment fragment = new RBDatePickerDialogFragment();
 
         if (options != null) {
           fragment.setArguments(createFragmentArguments(options));

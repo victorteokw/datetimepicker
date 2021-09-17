@@ -27,7 +27,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 @SuppressLint("ValidFragment")
-public class RNDatePickerDialogFragment extends DialogFragment {
+public class RBDatePickerDialogFragment extends DialogFragment {
   private DatePickerDialog instance;
 
   @Nullable
@@ -45,7 +45,7 @@ public class RNDatePickerDialogFragment extends DialogFragment {
   }
 
   public void update(Bundle args) {
-    final RNDate date = new RNDate(args);
+    final RBDate date = new RBDate(args);
     instance.updateDate(date.year(), date.month(), date.day());
   }
 
@@ -55,22 +55,22 @@ public class RNDatePickerDialogFragment extends DialogFragment {
           Context activityContext,
           @Nullable OnDateSetListener onDateSetListener) {
 
-    final RNDate date = new RNDate(args);
+    final RBDate date = new RBDate(args);
     final int year = date.year();
     final int month = date.month();
     final int day = date.day();
 
-    RNDatePickerDisplay display = RNDatePickerDisplay.DEFAULT;
+    RBDatePickerDisplay display = RBDatePickerDisplay.DEFAULT;
 
     if (args != null && args.getString(RNConstants.ARG_DISPLAY, null) != null) {
-      display = RNDatePickerDisplay.valueOf(args.getString(RNConstants.ARG_DISPLAY).toUpperCase(Locale.US));
+      display = RBDatePickerDisplay.valueOf(args.getString(RNConstants.ARG_DISPLAY).toUpperCase(Locale.US));
     }
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       switch (display) {
         case CALENDAR:
         case SPINNER:
-          String resourceName = display == RNDatePickerDisplay.CALENDAR
+          String resourceName = display == RBDatePickerDisplay.CALENDAR
                   ? "CalendarDatePickerDialog"
                   : "SpinnerDatePickerDialog";
           return new RNDismissableDatePickerDialog(

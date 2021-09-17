@@ -43,7 +43,7 @@ public class RNTimePickerDialogFragment extends DialogFragment {
   }
 
   public void update(Bundle args) {
-    final RNDate date = new RNDate(args);
+    final RBDate date = new RBDate(args);
     instance.updateTime(date.hour(), date.minute());
   }
 
@@ -52,7 +52,7 @@ public class RNTimePickerDialogFragment extends DialogFragment {
           Context activityContext,
           @Nullable OnTimeSetListener onTimeSetListener) {
 
-    final RNDate date = new RNDate(args);
+    final RBDate date = new RBDate(args);
     final int hour = date.hour();
     final int minute = date.minute();
     boolean is24hour = DateFormat.is24HourFormat(activityContext);

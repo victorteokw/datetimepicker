@@ -4,10 +4,10 @@ import java.util.Calendar;
 import java.util.TimeZone;
 import android.os.Bundle;
 
-public class RNDate {
+public class RBDate {
   private Calendar now;
 
-  public RNDate(Bundle args) {
+  public RBDate(Bundle args) {
     now = Calendar.getInstance();
 
     if (args != null && args.containsKey(RNConstants.ARG_VALUE)) {
