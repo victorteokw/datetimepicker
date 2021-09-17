@@ -12,5 +12,5 @@ import {requireNativeComponent} from 'react-native';
 import type {RCTDateTimePickerNative} from './types';
 
 export default ((requireNativeComponent(
-  'RBDatetimePicker',
+  'RBDateTimePicker',
 ): any): RCTDateTimePickerNative);
