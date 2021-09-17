@@ -7,6 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RNDateTimePicker : UIDatePicker
+@interface RBDateTimePicker : UIDatePicker
 
 @end

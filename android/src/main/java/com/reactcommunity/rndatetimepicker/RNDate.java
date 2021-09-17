@@ -1,4 +1,4 @@
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import java.util.Calendar;
 import java.util.TimeZone;

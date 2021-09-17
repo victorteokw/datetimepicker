@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  * </p>
  */
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
-import static com.reactcommunity.rndatetimepicker.ReflectionHelper.findField;
+import static com.reactcommunity.RBDatetimePicker.ReflectionHelper.findField;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

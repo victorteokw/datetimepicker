@@ -45,7 +45,7 @@ export function getPickerHeightStyle(
     // when display is UIDatePickerStyleAutomatic, ios will "Automatically pick the best style available for the current platform & mode."
     // because we don't know what that is going to be, we need to ask native for it
     // TODO vonovak this value could be cached
-    return NativeModules.RNDateTimePickerManager.getDefaultDisplayValue({
+    return NativeModules.RBDatetimePickerManager.getDefaultDisplayValue({
       mode,
     }).then(({determinedDisplayValue}) => {
       return getHeightStyleFromKnowValues(determinedDisplayValue, mode);

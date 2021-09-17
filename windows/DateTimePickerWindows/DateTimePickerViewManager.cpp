@@ -19,7 +19,7 @@ namespace winrt::DateTimePicker::implementation {
 
     // IViewManager
     winrt::hstring DateTimePickerViewManager::Name() noexcept {
-        return L"RNDateTimePickerWindows";
+        return L"RBDatetimePickerWindows";
     }
 
     xaml::FrameworkElement DateTimePickerViewManager::CreateView() noexcept {

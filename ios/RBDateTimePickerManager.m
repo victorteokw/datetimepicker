@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RNDateTimePickerManager.h"
+#import "RBDateTimePickerManager.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTEventDispatcher.h>
-#import "RNDateTimePicker.h"
+#import "RBDateTimePicker.h"
 #import <React/UIView+React.h>
 
 @implementation RCTConvert(UIDatePicker)
@@ -36,13 +36,13 @@ RCT_ENUM_CONVERTER(UIUserInterfaceStyle, (@{
 
 @end
 
-@implementation RNDateTimePickerManager
+@implementation RBDateTimePickerManager
 
 RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
-  return [RNDateTimePicker new];
+  return [RBDateTimePicker new];
 }
 
 + (NSString*) datepickerStyleToString: (UIDatePickerStyle) style {
@@ -65,7 +65,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(getDefaultDisplayValue:(NSDictionary *)options resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIDatePicker* view = [RNDateTimePicker new];
+        UIDatePicker* view = [RBDateTimePicker new];
         
         view.preferredDatePickerStyle = UIDatePickerStyleAutomatic;
         UIDatePickerMode renderedMode = [RCTConvert UIDatePickerMode:options[@"mode"]];
@@ -75,7 +75,7 @@ RCT_EXPORT_METHOD(getDefaultDisplayValue:(NSDictionary *)options resolver:(RCTPr
         UIDatePickerStyle determinedDisplayValue = view.datePickerStyle;
 
         resolve(@{
-                 @"determinedDisplayValue": [RNDateTimePickerManager datepickerStyleToString:determinedDisplayValue],
+                 @"determinedDisplayValue": [RBDateTimePickerManager datepickerStyleToString:determinedDisplayValue],
                 });
     });
 }
@@ -89,7 +89,7 @@ RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_REMAP_VIEW_PROPERTY(mode, datePickerMode, UIDatePickerMode)
 RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)
 
-RCT_CUSTOM_VIEW_PROPERTY(themeVariant, UIUserInterfaceStyle, RNDateTimePicker) {
+RCT_CUSTOM_VIEW_PROPERTY(themeVariant, UIUserInterfaceStyle, RBDateTimePicker) {
     if (@available(iOS 13.0, *)) {
         if (json) {
             UIUserInterfaceStyle propValue = [RCTConvert UIUserInterfaceStyle:json];
@@ -100,7 +100,7 @@ RCT_CUSTOM_VIEW_PROPERTY(themeVariant, UIUserInterfaceStyle, RNDateTimePicker) {
     }
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(textColor, UIColor, RNDateTimePicker)
+RCT_CUSTOM_VIEW_PROPERTY(textColor, UIColor, RBDateTimePicker)
 {
   if (@available(iOS 14.0, *) && view.datePickerStyle != UIDatePickerStyleWheels) {
     // prevents #247
@@ -122,7 +122,7 @@ RCT_CUSTOM_VIEW_PROPERTY(textColor, UIColor, RNDateTimePicker)
 }
 
 // TODO vonovak setting preferredDatePickerStyle invalidates minuteinterval
-RCT_CUSTOM_VIEW_PROPERTY(displayIOS, UIDatePickerStyle, RNDateTimePicker)
+RCT_CUSTOM_VIEW_PROPERTY(displayIOS, UIDatePickerStyle, RBDateTimePicker)
 {
     if (@available(iOS 13.4, *)) {
         if (json) {
@@ -134,7 +134,7 @@ RCT_CUSTOM_VIEW_PROPERTY(displayIOS, UIDatePickerStyle, RNDateTimePicker)
     }
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(disabled, BOOL, RNDateTimePicker)
+RCT_CUSTOM_VIEW_PROPERTY(disabled, BOOL, RBDateTimePicker)
 {
   if (json) {
     view.enabled = !([RCTConvert BOOL:json]);

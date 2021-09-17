@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 /**
  * Date picker display options.

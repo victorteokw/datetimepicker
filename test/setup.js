@@ -1,7 +1,7 @@
 import {NativeModules} from 'react-native';
-NativeModules.RNDateTimePickerManager = {};
+NativeModules.RBDatetimePickerManager = {};
 
-NativeModules.RNDateTimePickerManager.getDefaultDisplayValue = jest.fn(() =>
+NativeModules.RBDatetimePickerManager.getDefaultDisplayValue = jest.fn(() =>
   Promise.resolve({
     determinedDisplayValue: 'spinner',
   }),

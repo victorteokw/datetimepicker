@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.DialogInterface;
@@ -22,7 +22,7 @@ import com.facebook.react.bridge.*;
 import com.facebook.react.common.annotations.VisibleForTesting;
 import com.facebook.react.module.annotations.ReactModule;
 
-import static com.reactcommunity.rndatetimepicker.Common.dismissDialog;
+import static com.reactcommunity.RBDatetimePicker.Common.dismissDialog;
 
 /**
  * {@link NativeModule} that allows JS to show a native date picker dialog and get called back when

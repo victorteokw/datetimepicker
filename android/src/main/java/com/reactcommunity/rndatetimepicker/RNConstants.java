@@ -1,4 +1,4 @@
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 public final class RNConstants {
   public static final String ERROR_NO_ACTIVITY = "E_NO_ACTIVITY";

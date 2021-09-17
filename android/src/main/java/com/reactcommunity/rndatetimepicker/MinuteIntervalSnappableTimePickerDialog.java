@@ -1,4 +1,4 @@
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import java.util.ArrayList;
 import java.util.List;

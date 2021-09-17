@@ -6,7 +6,7 @@
  * </p>
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import com.facebook.react.bridge.*;
 import com.facebook.react.common.annotations.VisibleForTesting;
@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
-import static com.reactcommunity.rndatetimepicker.Common.dismissDialog;
+import static com.reactcommunity.RBDatetimePicker.Common.dismissDialog;
 
 /**
  * {@link NativeModule} that allows JS to show a native time picker dialog and get called back when

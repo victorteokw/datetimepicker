@@ -207,7 +207,7 @@ List of possible values:
 - `"countdown"` (`iOS` only)
 
 ```js
-<RNDateTimePicker mode="time" />
+<RBDatetimePicker mode="time" />
 ```
 
 #### `display` (`optional`)
@@ -229,7 +229,7 @@ List of possible values for iOS (maps to [preferredDatePickerStyle](https://deve
 - `"inline"` - Affects only iOS 14 and later. Will fall back to "spinner" if not supported.
 
 ```js
-<RNDateTimePicker display="spinner" />
+<RBDatetimePicker display="spinner" />
 ```
 
 #### `onChange` (`optional`)
@@ -241,7 +241,7 @@ This is called when the user changes the date or time in the UI. It receives the
 ```js
 setDate = (event, date) => {};
 
-<RNDateTimePicker onChange={this.setDate} />;
+<RBDatetimePicker onChange={this.setDate} />;
 ```
 
 #### `value` (`required`)
@@ -249,7 +249,7 @@ setDate = (event, date) => {};
 Defines the date or time value used in the component.
 
 ```js
-<RNDateTimePicker value={new Date()} />
+<RBDatetimePicker value={new Date()} />
 ```
 
 #### `maximumDate` (`optional`)
@@ -257,7 +257,7 @@ Defines the date or time value used in the component.
 Defines the maximum date that can be selected. Note that on Android, this only works for `date` mode because [TimePicker](https://developer.android.com/reference/android/widget/TimePicker) does not support this.
 
 ```js
-<RNDateTimePicker maximumDate={new Date(2300, 10, 20)} />
+<RBDatetimePicker maximumDate={new Date(2300, 10, 20)} />
 ```
 
 #### `minimumDate` (`optional`)
@@ -265,7 +265,7 @@ Defines the maximum date that can be selected. Note that on Android, this only w
 Defines the minimum date that can be selected. Note that on Android, this only works for `date` mode because [TimePicker](https://developer.android.com/reference/android/widget/TimePicker) does not support this.
 
 ```js
-<RNDateTimePicker minimumDate={new Date(1950, 0, 1)} />
+<RBDatetimePicker minimumDate={new Date(1950, 0, 1)} />
 ```
 
 #### `timeZoneOffsetInMinutes` (`optional`, `iOS and Android only`)
@@ -274,7 +274,7 @@ Allows changing of the timeZone of the date picker. By default it uses the devic
 
 ```js
 // GMT+1
-<RNDateTimePicker timeZoneOffsetInMinutes={60} />
+<RBDatetimePicker timeZoneOffsetInMinutes={60} />
 ```
 
 #### `timeZoneOffsetInSeconds` (`optional`, `Windows only`)
@@ -283,7 +283,7 @@ Allows changing of the time zone of the date picker. By default it uses the devi
 
 ```js
 // UTC+1
-<RNDateTimePicker timeZoneOffsetInSeconds={3600} />
+<RBDatetimePicker timeZoneOffsetInSeconds={3600} />
 ```
 
 #### `dayOfWeekFormat` (`optional`, `Windows only`)
@@ -292,7 +292,7 @@ Sets the display format for the day of the week headers.
 Reference: https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.calendarview.dayofweekformat?view=winrt-18362#remarks
 
 ```js
-<RNDateTimePicker dayOfWeekFormat={'{dayofweek.abbreviated(2)}'} />
+<RBDatetimePicker dayOfWeekFormat={'{dayofweek.abbreviated(2)}'} />
 ```
 
 #### `dateFormat` (`optional`, `Windows only`)
@@ -301,7 +301,7 @@ Sets the display format for the date value in the picker's text box.
 Reference: https://docs.microsoft.com/en-us/uwp/api/windows.globalization.datetimeformatting.datetimeformatter?view=winrt-18362#examples
 
 ```js
-<RNDateTimePicker dateFormat="dayofweek day month" />
+<RBDatetimePicker dateFormat="dayofweek day month" />
 ```
 
 #### `firstDayOfWeek` (`optional`, `Windows only`)
@@ -309,7 +309,7 @@ Reference: https://docs.microsoft.com/en-us/uwp/api/windows.globalization.dateti
 Indicates which day is shown as the first day of the week.
 
 ```js
-<RNDateTimePicker firstDayOfWeek={DAY_OF_WEEK.Wednesday} />
+<RBDatetimePicker firstDayOfWeek={DAY_OF_WEEK.Wednesday} />
 // The native parameter type is an enum defined in defined https://docs.microsoft.com/en-us/uwp/api/windows.globalization.dayofweek?view=winrt-18362 - meaning an integer needs to passed here (DAY_OF_WEEK).
 ```
 
@@ -318,7 +318,7 @@ Indicates which day is shown as the first day of the week.
 Allows changing of the textColor of the date picker. Has effect only when `display` is `"spinner"`.
 
 ```js
-<RNDateTimePicker textColor="red" />
+<RBDatetimePicker textColor="red" />
 ```
 
 #### `themeVariant` (`optional`, `iOS only`)
@@ -333,7 +333,7 @@ List of possible values:
 - `"dark"`
 
 ```js
-<RNDateTimePicker themeVariant="light" />
+<RBDatetimePicker themeVariant="light" />
 ```
 
 #### `locale` (`optional`, `iOS only`)
@@ -341,7 +341,7 @@ List of possible values:
 Allows changing of the locale of the component. By default it uses the device's locale.
 
 ```js
-<RNDateTimePicker locale="es-ES" />
+<RBDatetimePicker locale="es-ES" />
 ```
 
 #### `is24Hour` (`optional`, `Windows and Android only`)
@@ -349,7 +349,7 @@ Allows changing of the locale of the component. By default it uses the device's 
 Allows changing of the time picker to a 24 hour format. By default, this value is decided automatcially based on the user's chosen locale and other preferences.
 
 ```js
-<RNDateTimePicker is24Hour={true} />
+<RBDatetimePicker is24Hour={true} />
 ```
 
 #### `neutralButtonLabel` (`optional`, `Android only`)
@@ -358,7 +358,7 @@ Allows displaying neutral button on picker dialog.
 Pressing button can be observed in onChange handler as `event.type === 'neutralButtonPressed'`
 
 ```js
-<RNDateTimePicker neutralButtonLabel="clear" />
+<RBDatetimePicker neutralButtonLabel="clear" />
 ```
 
 #### `minuteInterval` (`optional`)
@@ -371,7 +371,7 @@ Possible values are: `1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30`
 on iOS, this in only supported when `display="spinner"`
 
 ```js
-<RNDateTimePicker minuteInterval={10} />
+<RBDatetimePicker minuteInterval={10} />
 ```
 
 #### `style` (`optional`, `iOS only`)
@@ -383,7 +383,7 @@ Please note that by default, picker's text color is controlled by the applicatio
 This means that eg. if the device has dark mode turned on, and your screen background color is white, you will not see the picker. Please use the `Appearance` api to adjust the picker's background color so that it is visible, as we do in the [example App](/example/App.js) or [opt-out from dark mode](https://stackoverflow.com/a/56546554/2070942).
 
 ```js
-<RNDateTimePicker style={{flex: 1}} />
+<RBDatetimePicker style={{flex: 1}} />
 ```
 
 #### `disabled` (`optional`, `iOS only`)
@@ -392,7 +392,7 @@ If true, the user won't be able to interact with the view.
 
 ## Migration from the older components
 
-`RNDateTimePicker` is the new common name used to represent the old versions of iOS and Android.
+`RBDatetimePicker` is the new common name used to represent the old versions of iOS and Android.
 
 On Android, open picker modals will update the selected date and/or time if the prop `value` changes. For example, if a HOC holding state, updates the `value` prop. Previously the component used to close the modal and render a new one on consecutive calls.
 
@@ -407,7 +407,7 @@ On Android, open picker modals will update the selected date and/or time if the 
 
   ```js
   // Now
-  <RNDateTimePicker value={new Date()} />
+  <RBDatetimePicker value={new Date()} />
   ```
 
 - `date` is deprecated, use `value` instead.
@@ -419,7 +419,7 @@ On Android, open picker modals will update the selected date and/or time if the 
 
   ```js
   // Now
-  <RNDateTimePicker value={new Date()} />
+  <RBDatetimePicker value={new Date()} />
   ```
 
 - `onChange` now returns also the date.
@@ -433,7 +433,7 @@ On Android, open picker modals will update the selected date and/or time if the 
   ```js
   // Now
   onChange = (event, date) => {};
-  <RNDateTimePicker onChange={this.onChange} />;
+  <RBDatetimePicker onChange={this.onChange} />;
   ```
 
 - `onDateChange` is deprecated, use `onChange` instead.
@@ -447,7 +447,7 @@ On Android, open picker modals will update the selected date and/or time if the 
   ```js
   // Now
   setDate = (event, date) => {};
-  <RNDateTimePicker onChange={this.setDate} />;
+  <RBDatetimePicker onChange={this.setDate} />;
   ```
 
 ### DatePickerAndroid
@@ -467,7 +467,7 @@ On Android, open picker modals will update the selected date and/or time if the 
 
   ```js
   // Now
-  <RNDateTimePicker mode="date" value={new Date()} />
+  <RBDatetimePicker mode="date" value={new Date()} />
   ```
 
 - `minDate` and `maxDate` are deprecated, use `minimumDate` and `maximumDate` instead.
@@ -486,7 +486,7 @@ On Android, open picker modals will update the selected date and/or time if the 
 
   ```js
   // Now
-  <RNDateTimePicker
+  <RBDatetimePicker
     mode="date"
     minimumDate={new Date()}
     maximumDate={new Date()}
@@ -514,7 +514,7 @@ On Android, open picker modals will update the selected date and/or time if the 
       // timeSetAction
     }
   };
-  <RNDateTimePicker mode="date" onChange={this.setDate} />;
+  <RBDatetimePicker mode="date" onChange={this.setDate} />;
   ```
 
 - `dismissedAction` is deprecated, use `onChange` instead.
@@ -538,7 +538,7 @@ On Android, open picker modals will update the selected date and/or time if the 
       // dismissedAction
     }
   };
-  <RNDateTimePicker mode="date" onChange={this.setDate} />;
+  <RBDatetimePicker mode="date" onChange={this.setDate} />;
   ```
 
 ### TimePickerAndroid
@@ -564,7 +564,7 @@ On Android, open picker modals will update the selected date and/or time if the 
   ```js
   // Now
   // It will use the hour and minute defined in date
-  <RNDateTimePicker mode="time" value={new Date()} />
+  <RBDatetimePicker mode="time" value={new Date()} />
   ```
 
 - `timeSetAction` is deprecated, use `onChange` instead.
@@ -588,7 +588,7 @@ On Android, open picker modals will update the selected date and/or time if the 
       // Use the hour and minute from the date object
     }
   };
-  <RNDateTimePicker mode="time" onChange={this.setTime} />;
+  <RBDatetimePicker mode="time" onChange={this.setTime} />;
   ```
 
 - `dismissedAction` is deprecated, use `onChange` instead.
@@ -612,7 +612,7 @@ On Android, open picker modals will update the selected date and/or time if the 
       // dismissedAction
     }
   };
-  <RNDateTimePicker mode="time" onChange={this.setTime} />;
+  <RBDatetimePicker mode="time" onChange={this.setTime} />;
   ```
 
 ## Contributing to the component
@@ -639,7 +639,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
      platform :ios, '8.0'
 
      # Point to the installed version
-     pod 'RNDateTimePicker', :path => '../node_modules/yet-yet-another-datetime-picker/RNDateTimePicker.podspec'
+     pod 'RBDatetimePicker', :path => '../node_modules/yet-yet-another-datetime-picker/RBDatetimePicker.podspec'
 
      # React/React-Native specific pods
      pod 'React', :path => '../node_modules/react-native', :subspecs => [
@@ -687,7 +687,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 3. Add the import and link the package in `MainApplication.java`:
 
    ```diff
-   + import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
+   + import com.reactcommunity.RBDatetimePicker.RBDatetimePickerPackage;
 
    public class MainApplication extends Application implements ReactApplication {
 
@@ -696,7 +696,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
        @SuppressWarnings("UnnecessaryLocalVariable")
        List<ReactPackage> packages = new PackageList(this).getPackages();
        // Packages that cannot be autolinked yet can be added manually here, for example:
-   +   packages.add(new RNDateTimePickerPackage());
+   +   packages.add(new RBDatetimePickerPackage());
        return packages;
      }
    }

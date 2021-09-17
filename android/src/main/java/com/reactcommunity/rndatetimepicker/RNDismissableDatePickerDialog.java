@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -18,7 +18,7 @@ import androidx.annotation.Nullable;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import static com.reactcommunity.rndatetimepicker.ReflectionHelper.findField;
+import static com.reactcommunity.RBDatetimePicker.ReflectionHelper.findField;
 
 /**
  * <p>

@@ -10,7 +10,7 @@
     "src",
     "flow-typed",
     "windows",
-    "RNDateTimePicker.podspec"
+    "RBDateTimePicker.podspec"
   ],
   "publishConfig": {
     "access": "public"

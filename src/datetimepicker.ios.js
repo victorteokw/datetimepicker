@@ -4,12 +4,12 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * This is a controlled component version of RNDateTimePicker
+ * This is a controlled component version of RBDatetimePicker
  *
  * @format
  * @flow strict-local
  */
-import RNDateTimePicker from './picker';
+import RBDatetimePicker from './picker';
 import {toMilliseconds} from './utils';
 import {IOS_DISPLAY, MODE_DATE} from './constants';
 import invariant from 'invariant';
@@ -109,7 +109,7 @@ export default function Picker({
   toMilliseconds(dates, 'value', 'minimumDate', 'maximumDate');
 
   return (
-    <RNDateTimePicker
+    <RBDatetimePicker
       testID={testID}
       ref={_picker}
       style={StyleSheet.compose(heightStyle, style)}

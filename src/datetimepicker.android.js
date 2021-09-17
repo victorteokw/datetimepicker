@@ -74,7 +74,7 @@ function timeZoneOffsetDateSetter(date, timeZoneOffsetInMinutes) {
   return localDate;
 }
 
-export default function RNDateTimePicker(props: AndroidNativeProps) {
+export default function RBDatetimePicker(props: AndroidNativeProps) {
   validateProps(props);
   const {
     mode,
@@ -160,7 +160,7 @@ export default function RNDateTimePicker(props: AndroidNativeProps) {
   return null;
 }
 
-RNDateTimePicker.defaultProps = {
+RBDatetimePicker.defaultProps = {
   display: DISPLAY_DEFAULT,
   mode: MODE_DATE,
 };

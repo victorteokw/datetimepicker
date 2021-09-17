@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DatePicker applies styling to DatePicker 1`] = `
-<RNDateTimePicker
+<RBDatetimePicker
   date={1376949600000}
   disabled={false}
   displayIOS="default"
@@ -23,7 +23,7 @@ exports[`DatePicker applies styling to DatePicker 1`] = `
 `;
 
 exports[`DatePicker renders a native Component 1`] = `
-<RNDateTimePicker
+<RBDatetimePicker
   date={1376949600000}
   disabled={false}
   displayIOS="default"
@@ -40,7 +40,7 @@ exports[`DatePicker renders a native Component 1`] = `
 `;
 
 exports[`DatePicker renders with mode countdown 1`] = `
-<RNDateTimePicker
+<RBDatetimePicker
   date={1376949600000}
   disabled={false}
   displayIOS="default"
@@ -57,7 +57,7 @@ exports[`DatePicker renders with mode countdown 1`] = `
 `;
 
 exports[`DatePicker renders with mode datetime 1`] = `
-<RNDateTimePicker
+<RBDatetimePicker
   date={1376949600000}
   disabled={false}
   displayIOS="default"
@@ -74,7 +74,7 @@ exports[`DatePicker renders with mode datetime 1`] = `
 `;
 
 exports[`DatePicker renders with mode time 1`] = `
-<RNDateTimePicker
+<RBDatetimePicker
   date={1376949600000}
   disabled={false}
   displayIOS="default"

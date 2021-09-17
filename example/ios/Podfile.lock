@@ -294,7 +294,7 @@ PODS:
     - React-cxxreact (= 0.62.3)
     - React-jsi (= 0.62.3)
     - ReactCommon/callinvoker (= 0.62.3)
-  - RNDateTimePicker (3.5.2):
+  - RBDatetimePicker (3.5.2):
     - React-Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -348,7 +348,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/callinvoker (from `../../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../../node_modules/react-native/ReactCommon`)
-  - RNDateTimePicker (from `../..`)
+  - RBDatetimePicker (from `../..`)
   - Yoga (from `../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -417,7 +417,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../../node_modules/react-native/ReactCommon"
-  RNDateTimePicker:
+  RBDatetimePicker:
     :path: "../.."
   Yoga:
     :path: "../../node_modules/react-native/ReactCommon/yoga"
@@ -459,7 +459,7 @@ SPEC CHECKSUMS:
   React-RCTText: fc8aaead300090f23dd0974545d75e3c43883922
   React-RCTVibration: 36a70f1015574284fa6770993c1e83a1f85dbabc
   ReactCommon: 3ea86417fa6e432b500579df40b057df54cfb4d4
-  RNDateTimePicker: 7658208086d86d09e1627b5c34ba0cf237c60140
+  RBDatetimePicker: 7658208086d86d09e1627b5c34ba0cf237c60140
   Yoga: b5db822228963b87948afa7a5a531088607151dc
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import DatePicker from '../src/index.js';
-import RNDateTimePickerIOS from '../src/picker.ios';
+import RBDatetimePickerIOS from '../src/picker.ios';
 import AndroidDateTimePicker from '../src/datetimepicker.android';
 import {render, fireEvent, waitFor} from '@testing-library/react-native';
 
@@ -40,7 +40,7 @@ describe('DatePicker', () => {
     }
     const {UNSAFE_getByType} = await renderPicker({onChange});
 
-    fireEvent(UNSAFE_getByType(RNDateTimePickerIOS), 'onChange', {
+    fireEvent(UNSAFE_getByType(RBDatetimePickerIOS), 'onChange', {
       type: 'event',
       nativeEvent: {
         timestamp: date.getTime(),

@@ -1,4 +1,4 @@
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import androidx.annotation.Nullable;
 

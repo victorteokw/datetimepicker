@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RNDateTimePicker.h"
+#import "RBDateTimePicker.h"
 
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
 
-@interface RNDateTimePicker ()
+@interface RBDateTimePicker ()
 
 @property (nonatomic, copy) RCTBubblingEventBlock onChange;
 @property (nonatomic, assign) NSInteger reactMinuteInterval;
 
 @end
 
-@implementation RNDateTimePicker
+@implementation RBDateTimePicker
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

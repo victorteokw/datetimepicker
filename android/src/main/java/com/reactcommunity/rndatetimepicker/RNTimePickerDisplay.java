@@ -6,7 +6,7 @@
  * </p>
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 /**
  * Date picker display options.

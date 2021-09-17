@@ -6,7 +6,7 @@
  * </p>
  */
 
-package com.reactcommunity.rndatetimepicker;
+package com.reactcommunity.RBDatetimePicker;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;

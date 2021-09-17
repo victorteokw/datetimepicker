@@ -77,7 +77,7 @@ jobs:
           command: yarn install --frozen-lockfile --ignore-engines
           name: yarn install
       - rn/android_emulator_start:
-          logcat_grep: 'com.reactcommunity.rndatetimepicker'
+          logcat_grep: 'com.reactcommunity.RBDatetimePicker'
       - run:
           command: yarn detox:android:build:release
           name: build for detox

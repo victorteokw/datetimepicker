@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const RNDateTimePickerWindows = requireNativeComponent(
-  'RNDateTimePickerWindows',
+const RBDateTimePickerWindows = requireNativeComponent(
+  'RBDateTimePickerWindows',
 );
 const RNTimePickerWindows = requireNativeComponent('RNTimePickerWindows');
 
-export default function RNDateTimePickerQWE(props: WindowsNativeProps) {
+export default function RBDatetimePickerQWE(props: WindowsNativeProps) {
   const localProps = {
     dayOfWeekFormat: props.dayOfWeekFormat,
     dateFormat: props.dateFormat,
@@ -51,7 +51,7 @@ export default function RNDateTimePickerQWE(props: WindowsNativeProps) {
   // 'date' is the default mode
   if (props.mode === 'date' || props.mode == null) {
     return (
-      <RNDateTimePickerWindows
+      <RBDatetimePickerWindows
         {...localProps}
         onChange={_onChange}
         timeZoneOffsetInSeconds={timezoneOffsetInSeconds}

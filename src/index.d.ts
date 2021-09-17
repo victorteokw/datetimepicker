@@ -192,8 +192,8 @@ export type WindowsNativeProps = Readonly<
     }
 >;
 
-declare const RNDateTimePicker: FC<
+declare const RBDateTimePicker: FC<
   IOSNativeProps | AndroidNativeProps | WindowsNativeProps
 >;
 
-export default RNDateTimePicker;
+export default RBDateTimePicker;

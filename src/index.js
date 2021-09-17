@@ -1,3 +1,3 @@
-import RNDateTimePicker from './datetimepicker';
+import RBDatetimePicker from './datetimepicker';
 
-export default RNDateTimePicker;
+export default RBDatetimePicker;
